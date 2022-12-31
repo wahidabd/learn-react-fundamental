@@ -10,18 +10,18 @@ function LoginPage(loginSuccess) {
 		if (!error){
 			loginSuccess(data);
 		}
-
-		return (
-			<section className='login-page'>
-				<h2>Silahkan masuk untuk melanjutkan ...</h2>
-				<LoginInput login={onLogin}/>
-				<p>Belum punya akun? <Link to='/register'>Daftar di sini.</Link></p>
-			</section>
-		);
 	}
+
+	return (
+		<section className='login-page'>
+			<h2>Silahkan masuk untuk melanjutkan ...</h2>
+			<LoginInput login={onLogin}/>
+			<p>Belum punya akun? <Link to='/register'>Daftar di sini.</Link></p>
+		</section>
+	);
 }
 
-LoginPage.prototype = {
+LoginPage.propTypes = {
 	loginSuccess: PropTypes.func.isRequired
 }
 

@@ -25,7 +25,7 @@ function Navigation({logout, name}) {
 	);
 }
 
-Navigation.prototype = {
+Navigation.propTypes = {
 	logout: PropTypes.func.isRequired
 };
 
